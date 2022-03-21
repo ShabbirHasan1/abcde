@@ -1,0 +1,13 @@
+BANKNIFTY:
+  strike_diff : 100
+  lot_size    : 25
+  exchange    : NSE
+  last_close  : 
+  token       :
+
+NIFTY:
+  strike_diff : 50
+  lot_size    : 50
+  exchange    : NSE
+  last_close  : 
+  token       : 

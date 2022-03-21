@@ -1,0 +1,103 @@
+02/16/2022 08:11:31 PM INFO: Start All Processes.
+02/16/2022 08:11:31 PM INFO: All Processes have started.
+02/16/2022 08:11:31 PM INFO: Exchange Communication process has started.
+02/16/2022 08:11:31 PM INFO: Strategy Logic process has started.
+02/16/2022 08:11:32 PM INFO: Base Symbol ltp is: 37953.8
+02/16/2022 08:11:32 PM INFO: Call Symbol: NSE:BANKNIFTY2221738000CE
+02/16/2022 08:11:32 PM INFO: Put Symbol: NSE:BANKNIFTY2221738000PE
+02/16/2022 08:11:32 PM INFO: Creating Order Ticket.
+02/16/2022 08:11:32 PM INFO: Order ticket created for NSE:BANKNIFTY2221738000CE
+02/16/2022 08:11:32 PM INFO: {'symbol': 'NSE:BANKNIFTY2221738000CE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+02/16/2022 08:11:32 PM INFO: Creating Order Ticket.
+02/16/2022 08:11:32 PM INFO: Order ticket created for NSE:BANKNIFTY2221738000PE
+02/16/2022 08:11:32 PM INFO: {'symbol': 'NSE:BANKNIFTY2221738000PE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+02/16/2022 08:11:32 PM INFO: Order is filled by Strategy Logic Class.
+02/16/2022 08:11:32 PM INFO: Firing New Basket Order.
+02/16/2022 08:11:32 PM INFO: Order submitted successfully. Your Order Ref. No.52104097619
+02/16/2022 08:11:32 PM INFO: Order submitted successfully. Your Order Ref. No.52104097620
+02/16/2022 08:11:32 PM INFO: Both Orders are placed.
+02/16/2022 08:11:32 PM INFO: Manage order response queue.
+02/16/2022 08:11:32 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 159.0, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2221738000CE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+02/16/2022 08:11:32 PM INFO: Trade confirmation response is received from ExchComm.
+02/16/2022 08:11:33 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 234.4, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2221738000PE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+02/16/2022 08:11:33 PM INFO: Trade confirmation response is received from ExchComm.
+02/16/2022 08:11:33 PM INFO: EntryPrice: 393.4
+02/16/2022 08:11:33 PM INFO: Stoploss for this trade is: 493.4
+02/16/2022 08:11:33 PM INFO: Target for this trade is: 193.39999999999998
+02/16/2022 08:11:34 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:35 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:36 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:37 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:37 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:39 PM INFO: Current Premium is: 393.4
+02/16/2022 08:11:40 PM INFO: Current Premium is: 393.4
+03/19/2022 07:51:35 PM INFO: Start All Processes.
+03/19/2022 07:51:35 PM INFO: All Processes have started.
+03/19/2022 07:51:35 PM INFO: Strategy Logic process has started.
+03/19/2022 07:51:35 PM INFO: Exchange Communication process has started.
+03/19/2022 07:51:35 PM INFO: Your token has expired. Please generate a token
+03/19/2022 07:51:35 PM INFO: Base symbol Ltp is None.
+03/19/2022 07:51:35 PM INFO: Creating Order Ticket.
+03/19/2022 07:51:35 PM INFO: Order ticket created for None
+03/19/2022 07:51:35 PM INFO: {'symbol': None, 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:51:35 PM INFO: Creating Order Ticket.
+03/19/2022 07:51:35 PM INFO: Order ticket created for None
+03/19/2022 07:51:35 PM INFO: {'symbol': None, 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:51:35 PM INFO: Order is filled by Strategy Logic Class.
+03/19/2022 07:51:35 PM INFO: Firing New Basket Order.
+03/19/2022 07:51:35 PM INFO: Order submitted successfully. Your Order Ref. No.52104097619
+03/19/2022 07:51:35 PM INFO: Order submitted successfully. Your Order Ref. No.52104097620
+03/19/2022 07:51:35 PM INFO: Both Orders are placed.
+03/19/2022 07:51:35 PM INFO: Manage order response queue.
+03/19/2022 07:53:48 PM INFO: Start All Processes.
+03/19/2022 07:53:48 PM INFO: All Processes have started.
+03/19/2022 07:53:48 PM INFO: Exchange Communication process has started.
+03/19/2022 07:53:48 PM INFO: Strategy Logic process has started.
+03/19/2022 07:53:49 PM INFO: Base Symbol ltp is: 36428.6
+03/19/2022 07:53:49 PM INFO: Call Symbol: NSE:BANKNIFTY2221736400CE
+03/19/2022 07:53:49 PM INFO: Put Symbol: NSE:BANKNIFTY2221736400PE
+03/19/2022 07:53:49 PM INFO: Creating Order Ticket.
+03/19/2022 07:53:49 PM INFO: Order ticket created for NSE:BANKNIFTY2221736400CE
+03/19/2022 07:53:49 PM INFO: {'symbol': 'NSE:BANKNIFTY2221736400CE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:53:49 PM INFO: Creating Order Ticket.
+03/19/2022 07:53:49 PM INFO: Order ticket created for NSE:BANKNIFTY2221736400PE
+03/19/2022 07:53:49 PM INFO: {'symbol': 'NSE:BANKNIFTY2221736400PE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:53:49 PM INFO: Order is filled by Strategy Logic Class.
+03/19/2022 07:53:49 PM INFO: Firing New Basket Order.
+03/19/2022 07:53:49 PM INFO: Order submitted successfully. Your Order Ref. No.52104097619
+03/19/2022 07:53:49 PM INFO: Order submitted successfully. Your Order Ref. No.52104097620
+03/19/2022 07:53:49 PM INFO: Both Orders are placed.
+03/19/2022 07:53:49 PM INFO: Manage order response queue.
+03/19/2022 07:54:16 PM INFO: Start All Processes.
+03/19/2022 07:54:16 PM INFO: All Processes have started.
+03/19/2022 07:54:16 PM INFO: Exchange Communication process has started.
+03/19/2022 07:54:16 PM INFO: Strategy Logic process has started.
+03/19/2022 07:54:16 PM INFO: Base Symbol ltp is: 36428.6
+03/19/2022 07:54:16 PM INFO: Call Symbol: NSE:BANKNIFTY2232436400CE
+03/19/2022 07:54:16 PM INFO: Put Symbol: NSE:BANKNIFTY2232436400PE
+03/19/2022 07:54:16 PM INFO: Creating Order Ticket.
+03/19/2022 07:54:16 PM INFO: Order ticket created for NSE:BANKNIFTY2232436400CE
+03/19/2022 07:54:16 PM INFO: {'symbol': 'NSE:BANKNIFTY2232436400CE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:54:16 PM INFO: Creating Order Ticket.
+03/19/2022 07:54:16 PM INFO: Order ticket created for NSE:BANKNIFTY2232436400PE
+03/19/2022 07:54:16 PM INFO: {'symbol': 'NSE:BANKNIFTY2232436400PE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/19/2022 07:54:16 PM INFO: Order is filled by Strategy Logic Class.
+03/19/2022 07:54:16 PM INFO: Firing New Basket Order.
+03/19/2022 07:54:16 PM INFO: Order submitted successfully. Your Order Ref. No.52104097619
+03/19/2022 07:54:16 PM INFO: Order submitted successfully. Your Order Ref. No.52104097620
+03/19/2022 07:54:16 PM INFO: Both Orders are placed.
+03/19/2022 07:54:16 PM INFO: Manage order response queue.
+03/19/2022 07:54:16 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 577.9, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2232436400CE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+03/19/2022 07:54:16 PM INFO: Trade confirmation response is received from ExchComm.
+03/19/2022 07:54:16 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 575.9, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2232436400PE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+03/19/2022 07:54:16 PM INFO: Trade confirmation response is received from ExchComm.
+03/19/2022 07:54:16 PM INFO: EntryPrice: 1153.8
+03/19/2022 07:54:16 PM INFO: Stoploss for this trade is: 1253.8
+03/19/2022 07:54:16 PM INFO: Target for this trade is: 953.8
+03/19/2022 07:54:17 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:20 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:23 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:27 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:30 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:34 PM INFO: Current Premium is: 1153.8
+03/19/2022 07:54:37 PM INFO: Current Premium is: 1153.8
