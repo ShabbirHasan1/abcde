@@ -155,7 +155,7 @@ def main():
         'target_points'     : 200,
     }
 
-    controller = Controller(strategy_details)
+    controller = Controller(strategy_details, logger)
 
     controller.start()
 
