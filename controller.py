@@ -1,6 +1,7 @@
 import yaml
 from fyers_api import fyersModel
 import datetime
+from flask import Flask
 
 from multiprocessing import Process, Queue, Value
 from dataFeed import DataFeed
@@ -12,6 +13,8 @@ from globalEnums import StrategyState
 from log import get_logger
 
 logger = get_logger()
+
+app = Flask(__name__)
 
 class Controller:
 
@@ -120,6 +123,28 @@ class Controller:
 
                 break
 
+@app.route('/')
+@app.route('/home')
+def main():
+    trading_date   = datetime.date.today()
+    start_time     = datetime.time(9, 20)  
+
+    strategy_details = {
+        'local_id'   : 3,
+        'date'       : trading_date,
+        'start_time' : start_time,
+        'base_sym'   : "BANKNIFTY",
+        'stoploss_points'   : 100,
+        'target_points'     : 200,
+    }
+
+    controller = Controller(strategy_details)
+
+    controller.start()
+
+    return "Engine has started"
+
+'''   
 if __name__ == "__main__":
 
     trading_date   = datetime.date.today()
@@ -141,3 +166,4 @@ if __name__ == "__main__":
 
     #print(strategy_details)
         
+'''
