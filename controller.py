@@ -1,7 +1,6 @@
 import yaml
 from fyers_api import fyersModel
 import datetime
-from flask import Flask
 import logging
 from time import sleep
 from multiprocessing import Process, Queue, Value
@@ -11,18 +10,18 @@ from exchComm import ExchComm
 from access_token import get_fyers_object
 from globalEnums import StrategyState
 
+from log import get_logger
 
-app = Flask(__name__)
+logger = get_logger()
 
 class Controller:
 
-    def __init__(self, strategy_details, logger) -> None:
+    def __init__(self, strategy_details) -> None:
         
         self.strategy_details = strategy_details
         self.client_local_id  = strategy_details["local_id"]
         self.client_info      = self.get_client_info()
         self.base_sym         = strategy_details["base_sym"]
-        self.logger = logger
 
         self.access_token = self.get_access_token()
         self.fyers_client = get_fyers_object(self.client_info["client_app_id"], self.access_token)
@@ -104,12 +103,12 @@ class Controller:
         self.start_all_processes()
 
         #print("All Processes have started.")
-        self.logger.info("All Processes have started.")
+        logger.info("All Processes have started.")
 
         while True:
 
             try:
-                self.logger.info("Validating connection")
+                logger.info("Validating connection")
                 self.validate_conn()
             
             except KeyboardInterrupt:
@@ -123,64 +122,26 @@ class Controller:
             
             sleep(2)
 
-logging.basicConfig(
-    filename=f'/Users/hardcorecoder/Documents/Python/Heroku/hello-heroku/Logs/{date.today()}.log',
-    format='%(asctime)s %(levelname)s: %(message)s',
-    level=logging.INFO,
-    datefmt='%m/%d/%Y %I:%M:%S %p'
-)
 
-def get_logger():
-    """
-    Get logger.
 
-    :param name:
-    :return:
-    """
-    return logging.getLogger()
+# if __name__ == "__main__":
 
-@app.route('/')
-@app.route('/home')
-def main():
-    logger = get_logger()
-    trading_date   = datetime.date.today()
-    start_time     = datetime.time(9, 20)  
+trading_date   = datetime.date.today()
+start_time     = datetime.time(9, 20)  
 
-    strategy_details = {
-        'local_id'   : 3,
-        'date'       : trading_date,
-        'start_time' : start_time,
-        'base_sym'   : "BANKNIFTY",
-        'stoploss_points'   : 100,
-        'target_points'     : 200,
-    }
+strategy_details = {
+    'local_id'   : 3,
+    'date'       : trading_date,
+    'start_time' : start_time,
+    'base_sym'   : "BANKNIFTY",
+    'stoploss_points'   : 100,
+    'target_points'     : 200,
+}
 
-    controller = Controller(strategy_details, logger)
+controller = Controller(strategy_details)
 
-    controller.start()
+controller.start()
+#controller.check()
 
-    return "Engine has started"
-
-'''   
-if __name__ == "__main__":
-
-    trading_date   = datetime.date.today()
-    start_time     = datetime.time(9, 20)  
-
-    strategy_details = {
-        'local_id'   : 3,
-        'date'       : trading_date,
-        'start_time' : start_time,
-        'base_sym'   : "BANKNIFTY",
-        'stoploss_points'   : 100,
-        'target_points'     : 200,
-    }
-
-    controller = Controller(strategy_details)
-
-    controller.start()
-    #controller.check()
-
-    #print(strategy_details)
+#print(strategy_details)
         
-'''

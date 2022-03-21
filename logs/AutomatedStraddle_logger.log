@@ -101,3 +101,56 @@
 03/19/2022 07:54:30 PM INFO: Current Premium is: 1153.8
 03/19/2022 07:54:34 PM INFO: Current Premium is: 1153.8
 03/19/2022 07:54:37 PM INFO: Current Premium is: 1153.8
+03/21/2022 10:08:54 PM INFO: Start All Processes.
+03/21/2022 10:08:54 PM INFO: All Processes have started.
+03/21/2022 10:08:54 PM INFO: Validating connection
+03/21/2022 10:08:55 PM INFO: Exchange Communication process has started.
+03/21/2022 10:08:55 PM INFO: Strategy Logic process has started.
+03/21/2022 10:08:55 PM INFO: Base Symbol ltp is: 36018.5
+03/21/2022 10:08:55 PM INFO: Call Symbol: NSE:BANKNIFTY2232436000CE
+03/21/2022 10:08:55 PM INFO: Put Symbol: NSE:BANKNIFTY2232436000PE
+03/21/2022 10:08:55 PM INFO: Creating Order Ticket.
+03/21/2022 10:08:55 PM INFO: Order ticket created for NSE:BANKNIFTY2232436000CE
+03/21/2022 10:08:55 PM INFO: {'symbol': 'NSE:BANKNIFTY2232436000CE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/21/2022 10:08:55 PM INFO: Creating Order Ticket.
+03/21/2022 10:08:55 PM INFO: Order ticket created for NSE:BANKNIFTY2232436000PE
+03/21/2022 10:08:55 PM INFO: {'symbol': 'NSE:BANKNIFTY2232436000PE', 'qty': 25, 'type': 2, 'side': -1, 'productType': 'MARGIN', 'limitPrice': 0, 'stopPrice': 0, 'validity': 'DAY', 'disclosedQty': 0, 'offlineOrder': 'False', 'stopLoss': 0, 'takeProfit': 0}
+03/21/2022 10:08:55 PM INFO: Order is filled by Strategy Logic Class.
+03/21/2022 10:08:55 PM INFO: Firing New Basket Order.
+03/21/2022 10:08:55 PM INFO: Order submitted successfully. Your Order Ref. No.52104097619
+03/21/2022 10:08:55 PM INFO: Order submitted successfully. Your Order Ref. No.52104097620
+03/21/2022 10:08:55 PM INFO: Both Orders are placed.
+03/21/2022 10:08:55 PM INFO: Manage order response queue.
+03/21/2022 10:08:55 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 565.0, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2232436000CE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+03/21/2022 10:08:55 PM INFO: Trade confirmation response is received from ExchComm.
+03/21/2022 10:08:55 PM INFO: Order Detail: {'orderDateTime': '07-Aug-2020 13:09:23', 'id': '120080789053', 'exchOrdId': '1300000009419529', 'side': 1, 'segment': 10, 'instrument': 0, 'productType': 'INTRADAY', 'status': 2, 'qty': 1, 'remainingQuantity': 0, 'filledQty': 1, 'limitPrice': 0.0, 'stopPrice': 0.0, 'type': -1, 'discloseQty': 0, 'dqQtyRem': 0, 'orderValidity': 'DAY', 'source': 'ITS', 'slNo': 2, 'fyToken': '10100000003045', 'offlineOrder': 'False', 'message': 'TRADE CONFIRMED', 'orderNumStatus': '120080789053:2', 'tradedPrice': 411.85, 'exchange': 10, 'pan': 'AXXXXXXXXN', 'clientId': 'FXXXXX2', 'symbol': 'NSE:BANKNIFTY2232436000PE', 'ch': 0.65, 'chp': 0.35, 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
+03/21/2022 10:08:55 PM INFO: Trade confirmation response is received from ExchComm.
+03/21/2022 10:08:55 PM INFO: EntryPrice: 976.85
+03/21/2022 10:08:55 PM INFO: Stoploss for this trade is: 1076.85
+03/21/2022 10:08:55 PM INFO: Target for this trade is: 776.85
+03/21/2022 10:08:55 PM INFO: Current Premium is: 976.85
+03/21/2022 10:08:56 PM INFO: Validating connection
+03/21/2022 10:08:58 PM INFO: Validating connection
+03/21/2022 10:08:59 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:00 PM INFO: Validating connection
+03/21/2022 10:09:02 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:02 PM INFO: Validating connection
+03/21/2022 10:09:04 PM INFO: Validating connection
+03/21/2022 10:09:05 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:06 PM INFO: Validating connection
+03/21/2022 10:09:08 PM INFO: Validating connection
+03/21/2022 10:09:09 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:10 PM INFO: Validating connection
+03/21/2022 10:09:12 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:12 PM INFO: Validating connection
+03/21/2022 10:09:14 PM INFO: Validating connection
+03/21/2022 10:09:15 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:16 PM INFO: Validating connection
+03/21/2022 10:09:18 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:18 PM INFO: Validating connection
+03/21/2022 10:09:20 PM INFO: Validating connection
+03/21/2022 10:09:22 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:22 PM INFO: Validating connection
+03/21/2022 10:09:24 PM INFO: Validating connection
+03/21/2022 10:09:25 PM INFO: Current Premium is: 976.85
+03/21/2022 10:09:26 PM INFO: Validating connection
