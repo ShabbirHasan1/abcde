@@ -5,9 +5,9 @@ from pyparsing import condition_as_parse_action
 from globalEnums import OrderType, StrategyState, Expiry, OrderState
 from globalStructs import OrderTkt
 from globalFunctions import get_atm_strike, get_equity_symbol, get_opt_symbol, get_script_info, get_expiry
-from log import get_logger
+# from log import get_logger
 
-logger = get_logger()
+# logger = get_logger()
 
 class StrategyLogic:
 
