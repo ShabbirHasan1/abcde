@@ -205,6 +205,7 @@ class StrategyLogic:
         else:
 #             logger.info("Invalid Order Response.")
 #             logger.info(self.call_info['last_filled_price'])
+            pass
 
         if self.call_info['last_filled_price'] is not None and self.put_info['last_filled_price'] is not None: 
             self.entry_price =  self.call_info['last_filled_price'] + self.put_info['last_filled_price']
