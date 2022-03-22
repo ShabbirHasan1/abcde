@@ -210,12 +210,15 @@ class StrategyLogic:
         if self.call_info['last_filled_price'] is not None and self.put_info['last_filled_price'] is not None: 
             self.entry_price =  self.call_info['last_filled_price'] + self.put_info['last_filled_price']
 #             logger.info(f"EntryPrice: {self.entry_price}")
+            print(f"EntryPrice: {self.entry_price}")
 
             self.stoploss = self.entry_price + self.strategy_details["stoploss_points"]
 #             logger.info(f"Stoploss for this trade is: {self.stoploss}")
+            print(f"Stoploss for this trade is: {self.stoploss}")
             
             self.target   = self.entry_price - self.strategy_details["target_points"]
 #             logger.info(f"Target for this trade is: {self.target}")
+            print(f"Target for this trade is: {self.target}")
 
             self.strategy_state += 1
 
@@ -226,12 +229,13 @@ class StrategyLogic:
         put_ltp  = self.get_ltp(self.put_info['ticker'])
 
         if call_ltp is None or put_ltp is None:
-            logger.info("Response is None. Check Whether your are connected to Exchange or not. ")
+#             logger.info("Response is None. Check Whether your are connected to Exchange or not. ")
             return None
 
         self.curr_price = call_ltp + put_ltp
 
-        logger.info(f"Current Premium is: {self.curr_price}")
+#         logger.info(f"Current Premium is: {self.curr_price}")
+        print(f"Current Premium is: {self.curr_price}")
 
         if self.stoploss is not None and  self.curr_price >= self.stoploss:
             # send empty dict to exit all open positions
