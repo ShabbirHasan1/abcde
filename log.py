@@ -5,7 +5,7 @@ Create a logging interface here.
 import logging
 
 logging.basicConfig(
-    filename='/Users/hardcorecoder/Documents/Python/Projects/SingleClientAutomation Dummy/single-option/logs/AutomatedStraddle_logger.log',
+    #filename='/Users/hardcorecoder/Documents/Python/Projects/SingleClientAutomation Dummy/single-option/logs/AutomatedStraddle_logger.log',
     format='%(asctime)s %(levelname)s: %(message)s',
     level=logging.INFO,
     datefmt='%m/%d/%Y %I:%M:%S %p'
