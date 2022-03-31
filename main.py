@@ -10,9 +10,9 @@ from exchComm import ExchComm
 from access_token import get_fyers_object
 from globalEnums import StrategyState
 
-from log import get_logger
+#from log import get_logger
 
-logger = get_logger()
+#logger = get_logger()
 
 class Controller:
 
@@ -81,7 +81,7 @@ class Controller:
 
     def start_all_processes(self):
         #print("Start All Processes.")
-        logger.info("Start All Processes.")
+        #logger.info("Start All Processes.")
         #self.datafeed_proc.start()
         self.exch_comm_proc.start()
         self.strategy_logic_proc.start()
@@ -102,13 +102,13 @@ class Controller:
         
         self.start_all_processes()
 
-        #print("All Processes have started.")
-        logger.info("All Processes have started.")
+        print("All Processes have started.")
+        #logger.info("All Processes have started.")
 
         while True:
 
             try:
-                logger.info("Validating connection")
+                #logger.info("Validating connection")
                 self.validate_conn()
             
             except KeyboardInterrupt:
@@ -124,24 +124,24 @@ class Controller:
 
 
 
-# if __name__ == "__main__":
+if __name__ == "__main__":
 
-trading_date   = datetime.date.today()
-start_time     = datetime.time(9, 20)  
+    trading_date   = datetime.date.today()
+    start_time     = datetime.time(9, 20)  
 
-strategy_details = {
-    'local_id'   : 3,
-    'date'       : trading_date,
-    'start_time' : start_time,
-    'base_sym'   : "BANKNIFTY",
-    'stoploss_points'   : 100,
-    'target_points'     : 200,
-}
+    strategy_details = {
+        'local_id'   : 3,
+        'date'       : trading_date,
+        'start_time' : start_time,
+        'base_sym'   : "BANKNIFTY",
+        'stoploss_points'   : 100,
+        'target_points'     : 200,
+    }
 
-controller = Controller(strategy_details)
+    controller = Controller(strategy_details)
 
-controller.start()
-#controller.check()
+    controller.start()
+    #controller.check()
 
-#print(strategy_details)
+    #print(strategy_details)
         

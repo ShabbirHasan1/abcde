@@ -2,11 +2,11 @@ from time import sleep
 
 from numpy import append
 from globalEnums import StrategyState
-from log import get_logger
+# from log import get_logger
 from dataFeed import DataFeed
 from globalStructs import OrderTkt
 
-logger  = get_logger()
+# logger  = get_logger()
 
 class ExchComm:
 
@@ -35,28 +35,28 @@ class ExchComm:
         
         if ord_rsp['code'] != 200:
             
-            for rsp in ord_rsp['data']:
-                logger.info(rsp['body']['message'])
+#             for rsp in ord_rsp['data']:
+#                 logger.info(rsp['body']['message'])
 
             return None
         
         # if order response is 200 then check order code for both legs 
         for rsp in ord_rsp['data']:
 
-            if rsp['statusCode'] == 200:
+#             if rsp['statusCode'] == 200:
                 
-                logger.info(rsp['body']['message'])
+#                 logger.info(rsp['body']['message'])
 
                 #self.order_ids_list.append(rsp["body"]["id"])
 
                 self.num_of_ords_placed += 1
 
-        if self.num_of_ords_placed == 2: 
-            logger.info("Both Orders are placed.")   
+#         if self.num_of_ords_placed == 2: 
+#             logger.info("Both Orders are placed.")   
             
         
-        else:
-            logger.info("All Orders are not placed.")
+#         else:
+#             logger.info("All Orders are not placed.")
             
    
     def manage_ord_rsp_queue(self):
@@ -65,7 +65,7 @@ class ExchComm:
         '''
 
       
-        logger.info("Manage order response queue.")
+#         logger.info("Manage order response queue.")
 
         for order in self.ord_tkt:
             
@@ -112,7 +112,7 @@ class ExchComm:
                 'lp': 185.25, 'ex_sym': 'SBIN', 'description': 'STATE BANK OF INDIA'}
 
             #logger.info(f"Getting order details for id: {order_id}")
-            logger.info(f"Order Detail: {order_detail}")
+#             logger.info(f"Order Detail: {order_detail}")
 
             self.ord_rsp_queue.put(order_detail)
             
@@ -123,7 +123,7 @@ class ExchComm:
     #     pass 
    
     def start(self):
-        logger.info("Exchange Communication process has started.")
+#         logger.info("Exchange Communication process has started.")
         
         while True:
             #logger.info("Exch Comm Process is running!")
@@ -134,7 +134,7 @@ class ExchComm:
                     if order_type == 1:
                         self.ord_tkt = order_tkt
 
-                        logger.info("Firing New Basket Order.")
+#                         logger.info("Firing New Basket Order.")
 
                         # for dummy strategy
                         ord_rsp = {
@@ -165,7 +165,7 @@ class ExchComm:
 
                     # Exit all Open Positions
                     if order_type == -1:
-                        logger.info("Exiting all open positions.")
+#                         logger.info("Exiting all open positions.")
                         #ord_rsp = self.fyers_client.exit_positions(order_tkt)
                         #print(ord_rsp)
                         break

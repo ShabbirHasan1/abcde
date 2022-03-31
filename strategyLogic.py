@@ -1,13 +1,12 @@
 from time import sleep
 import datetime
 
-from pyparsing import condition_as_parse_action
 from globalEnums import OrderType, StrategyState, Expiry, OrderState
 from globalStructs import OrderTkt
 from globalFunctions import get_atm_strike, get_equity_symbol, get_opt_symbol, get_script_info, get_expiry
-from log import get_logger
+# from log import get_logger
 
-logger = get_logger()
+# logger = get_logger()
 
 class StrategyLogic:
 
@@ -53,12 +52,12 @@ class StrategyLogic:
         #print("Response: ", response)
         if response["s"] == "error":
             print(response['message'])
-            logger.info(response['message'])
+#             logger.info(response['message'])
 
             return None
 
         if response is None:
-            logger.info("Response from Exchange is None. May be you are not connected to internet.")
+#             logger.info("Response from Exchange is None. May be you are not connected to internet.")
             return response
 
         #logger.info(f"Response from exchange is: {response}")
@@ -81,10 +80,10 @@ class StrategyLogic:
         
         
         if base_sym_ltp is None:
-            logger.info("Base symbol Ltp is None.")
+#             logger.info("Base symbol Ltp is None.")
             return
 
-        logger.info(f"Base Symbol ltp is: {base_sym_ltp}")
+#         logger.info(f"Base Symbol ltp is: {base_sym_ltp}")
         
         #listt.append((self.base_formatted_sym, base_sym_ltp, "INDEX"))
 
@@ -92,8 +91,8 @@ class StrategyLogic:
 
         self.put_info["ticker"] = get_opt_symbol(self.script_info["exchange"], self.base_sym, atm_strike, get_expiry(Expiry.WEEKLY.value), "PE")
         self.call_info["ticker"]  = get_opt_symbol(self.script_info["exchange"], self.base_sym, atm_strike, get_expiry(Expiry.WEEKLY.value), "CE")
-        logger.info(f"Call Symbol: {self.call_info['ticker']}")
-        logger.info(f"Put Symbol: {self.put_info['ticker']}")
+#         logger.info(f"Call Symbol: {self.call_info['ticker']}")
+#         logger.info(f"Put Symbol: {self.put_info['ticker']}")
 
         #call_ltp = self.get_ltp(self.call_sym)
         #listt.append((self.call_sym, call_ltp, "CE"))
@@ -124,7 +123,7 @@ class StrategyLogic:
         this function will validate all things before creating an order ticket
         '''
 
-        logger.info("Creating Order Ticket.")
+#         logger.info("Creating Order Ticket.")
 
         lot_size = 25
 
@@ -143,8 +142,8 @@ class StrategyLogic:
             "takeProfit"   : 0
         } 
 
-        logger.info(f"Order ticket created for {symbol}")
-        logger.info(ord_tkt)
+#         logger.info(f"Order ticket created for {symbol}")
+#         logger.info(ord_tkt)
 
         #self.manage_lcl_ord_tkt(symbol, ord_tkt)
 
@@ -160,7 +159,7 @@ class StrategyLogic:
 
         self.orders_queue.put((1, listt))
         
-        logger.info("Order is filled by Strategy Logic Class.")
+#         logger.info("Order is filled by Strategy Logic Class.")
 
         self.strategy_state += 1
         #self.manage_strategy_state()
@@ -169,7 +168,7 @@ class StrategyLogic:
         
         if self.strategy_state.value == StrategyState.NEWREQ_PRE_SENT.value:
             self.strategy_state.value = StrategyState.NEWREQ_SENT.value
-            logger.info(f"Current Strategy State is: {self.strategy_state.value}")
+#             logger.info(f"Current Strategy State is: {self.strategy_state.value}")
 
     def trade_confirmed(self, ord_rsp):
 
@@ -203,18 +202,22 @@ class StrategyLogic:
             self.put_info['opt_type']      = "PE"
 
         else:
-            logger.info("Invalid Order Response.")
-            logger.info(self.call_info['last_filled_price'])
+#             logger.info("Invalid Order Response.")
+#             logger.info(self.call_info['last_filled_price'])
+            pass
 
         if self.call_info['last_filled_price'] is not None and self.put_info['last_filled_price'] is not None: 
             self.entry_price =  self.call_info['last_filled_price'] + self.put_info['last_filled_price']
-            logger.info(f"EntryPrice: {self.entry_price}")
+#             logger.info(f"EntryPrice: {self.entry_price}")
+            print(f"EntryPrice: {self.entry_price}")
 
             self.stoploss = self.entry_price + self.strategy_details["stoploss_points"]
-            logger.info(f"Stoploss for this trade is: {self.stoploss}")
+#             logger.info(f"Stoploss for this trade is: {self.stoploss}")
+            print(f"Stoploss for this trade is: {self.stoploss}")
             
             self.target   = self.entry_price - self.strategy_details["target_points"]
-            logger.info(f"Target for this trade is: {self.target}")
+#             logger.info(f"Target for this trade is: {self.target}")
+            print(f"Target for this trade is: {self.target}")
 
             self.strategy_state += 1
 
@@ -225,18 +228,19 @@ class StrategyLogic:
         put_ltp  = self.get_ltp(self.put_info['ticker'])
 
         if call_ltp is None or put_ltp is None:
-            logger.info("Response is None. Check Whether your are connected to Exchange or not. ")
+#             logger.info("Response is None. Check Whether your are connected to Exchange or not. ")
             return None
 
         self.curr_price = call_ltp + put_ltp
 
-        logger.info(f"Current Premium is: {self.curr_price}")
+#         logger.info(f"Current Premium is: {self.curr_price}")
+        print(f"Current Premium is: {self.curr_price}")
 
         if self.stoploss is not None and  self.curr_price >= self.stoploss:
             # send empty dict to exit all open positions
             data = (-1, {}) # -1 means we are exiting a position
 
-            logger.info(f"Stoploss: {self.stoploss} is hit. Sending order to exit all open positions.")
+#             logger.info(f"Stoploss: {self.stoploss} is hit. Sending order to exit all open positions.")
             self.orders_queue.put(data)
             self.strategy_state += 1
         
@@ -244,7 +248,7 @@ class StrategyLogic:
             # send empty dict to exit all open positions
             data = (-1, {}) # -1 means we are exiting a position
 
-            logger.info("Target is hit. Sending order to exit all open positions.")
+#             logger.info("Target is hit. Sending order to exit all open positions.")
             self.orders_queue.put(data)
             self.strategy_state += 1
 
@@ -255,13 +259,15 @@ class StrategyLogic:
 
     def start(self):
 
-        logger.info("Strategy Logic process has started.")
-        # curr_dt = datetime.datetime.now()
+#         logger.info("Strategy Logic process has started.")
+        curr_dt = datetime.datetime.now()
 
         # sleep(1)
 
-        while True:
+        while curr_dt >= self.trading_start_datetime:
             
+            curr_dt = datetime.datetime.now()
+
             if self.strategy_state == 0:
                 self.creating_local_ord_tkts()
             
@@ -281,7 +287,7 @@ class StrategyLogic:
                     # for now we will recieve order here only when both orders are placed 
                     ord_rsp = self.ord_rsp_queue.get(block=False)
                 
-                    logger.info("Trade confirmation response is received from ExchComm.")
+#                     logger.info("Trade confirmation response is received from ExchComm.")
                     self.trade_confirmed(ord_rsp)
                 
                 except:
